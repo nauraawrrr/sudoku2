@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sudogku</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="bg" id="bg" aria-hidden="true"></div>
+
+  <!-- BERANDA -->
+  <section id="home" class="screen">
+    <div class="dog big" aria-hidden="true"></div>
+
+    <h1 class="logo" aria-label="Sudogku">
+      <span>S</span><span>u</span><span>d</span><span>o</span><span>g</span><span>k</span><span>u</span>
+    </h1>
+
+    <p class="tag">Sudoku bareng si anjing gemes!</p>
+
+    <div class="levels">
+      <button class="go" data-level="easy">Santai</button>
+      <button class="go" data-level="medium">Sedang</button>
+      <button class="go" data-level="hard">Pusing</button>
+    </div>
+
+    <p class="how">
+      Isi kotak kosong dengan angka 1-9. Tiap baris, kolom, dan kotak warna tidak boleh ada angka kembar.
+    </p>
+  </section>
+
+  <!-- HALAMAN PERMAINAN -->
+  <main id="game" class="screen hidden">
+    <header>
+      <button id="back" class="round" aria-label="Kembali ke beranda">🏠</button>
+
+      <h1>Sudogku</h1>
+
+      <div class="stats">
+        <span id="lives" title="Nyawa"></span>
+        <span id="timer">00:00</span>
+      </div>
+    </header>
+
+    <section class="buddy">
+      <div class="dog" id="dog" aria-hidden="true"></div>
+      <p class="bubble" id="bubble"></p>
+    </section>
+
+    <div id="board" class="board" role="grid" aria-label="Papan sudoku"></div>
+
+    <div id="pad" class="pad"></div>
+
+    <div class="actions">
+      <select id="level" aria-label="Tingkat kesulitan">
+        <option value="easy">Santai</option>
+        <option value="medium" selected>Sedang</option>
+        <option value="hard">Pusing</option>
+      </select>
+
+      <button id="hint">Bocoran</button>
+      <button id="new">Main baru</button>
+    </div>
+  </main>
+
+  <!-- POP-UP KEMENANGAN -->
+  <div id="win" class="win hidden">
+    <div class="card">
+      <h2 id="winTitle"></h2>
+      <p id="winText"></p>
+      <button id="again">Main lagi</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
